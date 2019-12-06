@@ -5,13 +5,13 @@ const request = require('request-promise');
 const fs = require('fs-extra');
 
 // Crea archivo en blanco para llenarlo.
-const writeStream = fs.createWriteStream('modelos_ford.csv')
+const writeStream = fs.createWriteStream('modelos_kia.csv')
 
 //Funcion asincrona
 async function init() {
 
   const $ = await request({
-    uri: 'https://www.motor.es/ford/',
+    uri: 'https://www.motor.es/kia/',
     transform: body => cheerio.load(body)
   });
 
